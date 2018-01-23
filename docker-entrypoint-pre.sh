@@ -10,8 +10,8 @@ fi
 if [ -n "$SSMTP_USETLS" ]; then
     sed -i "s/UseTLS=NO/UseTLS=$SSMTP_USETLS/g" /etc/ssmtp/ssmtp.conf
 fi
-if [ -n "$SSMTP_STARTTLS" ]; then
-    sed -i "s/UseSTARTTLS=NO/UseSTARTTLS=$SSMTP_STARTTLS/g" /etc/ssmtp/ssmtp.conf
+if [ -n "$SSMTP_USESTARTTLS" ]; then
+    sed -i "s/UseSTARTTLS=NO/UseSTARTTLS=$SSMTP_USESTARTTLS/g" /etc/ssmtp/ssmtp.conf
 fi
 if [ -n "$SSMTP_REWRITEDOMAIN" ]; then
     sed -i "s/rewriteDomain=/rewriteDomain=$SSMTP_REWRITEDOMAIN/g" /etc/ssmtp/ssmtp.conf
