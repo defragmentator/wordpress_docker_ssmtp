@@ -1,4 +1,4 @@
-FROM wordpress:fpm 
+FROM wordpress:apache
 
 MAINTAINER Marcin Ochab <marcin.ochab@gmail.com>
 
@@ -11,4 +11,4 @@ COPY php-smtp.ini /usr/local/etc/php/conf.d/php-smtp.ini
 COPY docker-entrypoint-pre.sh /docker-entrypoint-pre.sh
 
 ENTRYPOINT ["/docker-entrypoint-pre.sh"]
-CMD ["php-fpm"]
+CMD ["apache2-foreground"]
