@@ -1,6 +1,6 @@
 Container based on original wordpress docker container with addition of ssmtp to allow mail sending.
 
-Package was inspired on [that project](https://github.com/RickWieman/Dockerfiles/tree/master/php-apache-ssmtp)
+Package was inspired by [that project](https://github.com/RickWieman/Dockerfiles/tree/master/php-apache-ssmtp)
 
 # Configuration
 ##  Configuration with environment variables
