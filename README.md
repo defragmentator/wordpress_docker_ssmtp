@@ -11,7 +11,7 @@ $SSMTP_MAILHUB
 
 $SSMTP_USETLS = YES/NO (default NO)
 
-$SSMTP_STARTTLS = YES/NO (default NO)
+$SSMTP_USESTARTTLS = YES/NO (default NO)
 
 $SSMTP_REWRITEDOMAIN (default empty)
 
