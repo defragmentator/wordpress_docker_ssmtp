@@ -14,7 +14,7 @@ if [ -n "$SSMTP_USESTARTTLS" ]; then
     sed -i "s/UseSTARTTLS=NO/UseSTARTTLS=$SSMTP_USESTARTTLS/g" /etc/ssmtp/ssmtp.conf
 fi
 if [ -n "$SSMTP_REWRITEDOMAIN" ]; then
-    sed -i "s/rewriteDomain=/rewriteDomain=$SSMTP_REWRITEDOMAIN/g" /etc/ssmtp/ssmtp.conf
+    sed -i "s/#rewriteDomain=/rewriteDomain=$SSMTP_REWRITEDOMAIN/g" /etc/ssmtp/ssmtp.conf
 fi
 if [ -n "$SSMTP_HOSTNAME" ]; then
     sed -i "s/hostname=yourserver.example.com/hostname=$SSMTP_HOSTNAME/g" /etc/ssmtp/ssmtp.conf
@@ -23,10 +23,10 @@ if [ -n "$SSMTP_FROMLINEOVERRIDE" ]; then
     sed -i "s/FromLineOverride=YES/FromLineOverride=$SSMTP_FROMLINEOVERRIDE/g" /etc/ssmtp/ssmtp.conf
 fi
 if [ -n "$SSMTP_AUTHUSER" ]; then
-    sed -i "s/AuthUser=/AuthUser=$SSMTP_AUTHUSER/g" /etc/ssmtp/ssmtp.conf
+    sed -i "s/AuthUser=yourmail@mail.com/AuthUser=$SSMTP_AUTHUSER/g" /etc/ssmtp/ssmtp.conf
 fi
 if [ -n "$SSMTP_AUTHPASS" ]; then
-    sed -i "s/AuthPass=/AuthPass=$SSMTP_AUTHPASS/g" /etc/ssmtp/ssmtp.conf
+    sed -i "s/AuthPass=password/AuthPass=$SSMTP_AUTHPASS/g" /etc/ssmtp/ssmtp.conf
 fi
 
 exec /usr/local/bin/docker-entrypoint.sh $@
